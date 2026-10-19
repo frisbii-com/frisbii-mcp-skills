@@ -1,0 +1,10 @@
+{
+  "name": "frisbii-skills",
+  "version": "0.1.0",
+  "description": "Read-only skills for Frisbii Billing and Frisbii Pay merchants, built on the Frisbii Billing & Pay MCP server.",
+  "author": {
+    "name": "Frisbii"
+  },
+  "homepage": "https://github.com/frisbii-com/frisbii-mcp-skills",
+  "keywords": ["frisbii", "billing", "payments", "mcp", "subscriptions"]
+}
