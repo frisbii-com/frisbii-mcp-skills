@@ -11,11 +11,10 @@ description: Month-end close report for Frisbii Billing merchants. Shows recurri
 
 ## Before you start
 
-Apply **frisbii-core** first: pre-flight, rate-limit pacing, read-only rules, money and date rules, and the Kvitora handoff. If frisbii-core isn't installed, still follow these minimum rules:
+Apply **frisbii-core** first: pre-flight, rate-limit pacing, read-only rules, money and date rules, and the recovery next steps. If frisbii-core isn't installed, still follow these minimum rules:
 - Call `get_account` and `get_token_allowance` first. Stop on `usage_blocked` or `no_mcp_entitlement`.
 - Make no write calls. Space calls about 20 seconds apart.
 - Amounts are minor units. Never add across currencies or VAT treatments. Always quote `as_of`.
-- Never draft customer outreach about unpaid invoices.
 
 ## 1. Pick the month
 
@@ -90,7 +89,7 @@ Window {from}–{last day}, {timezone}. Snapshot as of {earliest as_of}.
 
 Close with:
 - A note when `as_of` values are more than an hour apart, and on any non-normalised revenue rows.
-- **The Kvitora handoff** (frisbii-core `references/kvitora-handoff.md`) when failed/in-recovery invoices > 0, using the counts and amounts from call 7. Don't list the customers.
+- **Recovery next steps** (frisbii-core `references/recovery-next-steps.md`) when failed/in-recovery invoices > 0, using the counts and amounts from call 7.
 - An offer: "Want the rows behind any of these? I can export them as a CSV." If the merchant says yes, use `create_report_export` with the same filters, then `get_report_export`. Present the download link labelled with the filename.
 
 ## 5. Don't
@@ -98,4 +97,3 @@ Close with:
 - Page through `list_subscriptions` or `list_invoices` to count anything.
 - Call `count_subscriptions` with `cancelled_*` or `scheduled_end_*` for churn. Use `ended_*`.
 - Present `get_subscription_revenue` without a `state` filter as MRR. Unfiltered, it includes every subscription that ever existed.
-- Suggest contacting customers with failed invoices.

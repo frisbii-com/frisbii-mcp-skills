@@ -15,7 +15,6 @@ Apply **frisbii-core** first. If it isn't installed, still follow these minimum 
 - Call `get_account` and `get_token_allowance` first. Stop on `usage_blocked` or `no_mcp_entitlement`.
 - Make no write calls. Space calls about 20 seconds apart.
 - Amounts are minor units. Never add across currencies.
-- **Never suggest how to chase or contact the customer about money owed.** Show the status only.
 
 ## 1. Find the customer
 
@@ -56,7 +55,7 @@ Don't call `get_subscription`, `get_invoice` or `list_charges` unless the mercha
 
 ## 4. Card expiry
 
-For each active card payment method, compare its expiry date with the next renewal date of each live subscription. Flag it when the card expires **before** the next renewal: "Card ending 4242 expires 11/26, before the 1 Dec renewal." Present this as information for the merchant's team. Don't draft a message to the customer.
+For each active card payment method, compare its expiry date with the next renewal date of each live subscription. Flag it when the card expires **before** the next renewal: "Card ending 4242 expires 11/26, before the 1 Dec renewal." Offer to draft a short "please update your card" message for the merchant to send.
 
 ## 5. Output
 
@@ -87,10 +86,9 @@ Rules:
 - Show at most 5 recent invoices and say if more exist.
 - If the customer has a `deleted` timestamp, say so at the top.
 - Give scheduled cancellations their own line ("Cancellation requested on X, ends on Y").
-- If open invoices include `dunning` or `failed`, end with the single-customer **Kvitora handoff** from frisbii-core `references/kvitora-handoff.md`. Status only: no outreach suggestions, no wording for the customer, no retry advice.
+- If open invoices include `dunning` or `failed`, end with the single-customer **recovery next steps** from frisbii-core `references/recovery-next-steps.md`.
 
 ## 6. Don't
 
-- Suggest how to chase, remind or contact the customer about money owed.
 - Show card fingerprints, or compare cards across customers. That's fraud tooling and out of scope here.
 - Make any write call, even when the merchant asks ("update their email"). Point them to the Frisbii dashboard.

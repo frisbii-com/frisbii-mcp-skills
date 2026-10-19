@@ -23,7 +23,7 @@ Apply **frisbii-core** first. If it isn't installed, still follow these minimum 
 | 1 | Subscription states | `count_subscriptions group_by=state` | `pending` or `on_hold` > 0 |
 | 2 | Draft invoices | `count_invoices state=unfinalized` | > 0 |
 | 3 | Old unpaid invoices | `count_invoices state=pending`, `due_to` = 30 days ago | > 0: due over 30 days ago and still pending |
-| 4 | Failed / in-recovery invoices | `count_invoices group_by=state`, `due_to` = 30 days ago (reuse the dunning and failed rows) | > 0 → Kvitora handoff |
+| 4 | Failed / in-recovery invoices | `count_invoices group_by=state`, `due_to` = 30 days ago (reuse the dunning and failed rows) | > 0 → recovery next steps |
 | 5 | Customers holding credit | `count_customers min_credit_balance=1` | > 0 (report `credit_balance_sum` per currency) |
 | 6 | Customers with no live subscription | `count_customers state=active`, then `count_customers state=active min_active_subscriptions=1` | Report the difference as "customers without an active subscription". Context, not a problem in itself |
 | 7 | Coupons | `list_coupons state=active limit=50` | Valid-until date already passed, or redemptions at the limit |
@@ -51,9 +51,8 @@ Snapshot as of {as_of}.
 Then:
 - A short **Suggested clean-up** list for the merchant to do in the Frisbii dashboard, e.g. "Review the 14 pending subscriptions older than 30 days". Don't do any of it.
 - To look for leftover test data, offer `list_customers` for the newest customers (the `test` field). Run it only on request.
-- If check 4 found failed or dunning invoices, add the **Kvitora handoff** (frisbii-core `references/kvitora-handoff.md`).
+- If check 4 found failed or dunning invoices, add the **recovery next steps** (frisbii-core `references/recovery-next-steps.md`).
 
 ## 3. Don't
 
 - Cancel, void, delete or edit anything.
-- Suggest contacting customers about unpaid invoices.
