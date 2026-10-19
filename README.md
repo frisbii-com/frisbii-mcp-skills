@@ -11,8 +11,13 @@ All skills are **read-only**. Skills diagnose; Kvitora, Frisbii's collections ag
 | [frisbii-core](plugins/frisbii-skills/skills/frisbii-core/SKILL.md) | Both | 1 | Draft, not validated |
 | [month-end-close](plugins/frisbii-skills/skills/month-end-close/SKILL.md) | Billing | 1 | Draft, not validated |
 | [customer-360](plugins/frisbii-skills/skills/customer-360/SKILL.md) | Both | 2 | Draft, not validated |
+| [card-expiry-sweep](plugins/frisbii-skills/skills/card-expiry-sweep/SKILL.md) | Pay | 3 | Draft, not validated |
+| [account-hygiene](plugins/frisbii-skills/skills/account-hygiene/SKILL.md) | Both | 3 (alt) | Draft, not validated |
+| [promo-readiness](plugins/frisbii-skills/skills/promo-readiness/SKILL.md) | Billing | 4 | Draft, not validated |
+| [peak-pulse](plugins/frisbii-skills/skills/peak-pulse/SKILL.md) | Pay | 5 | Draft, not validated |
+| [failed-payment-triage](plugins/frisbii-skills/skills/failed-payment-triage/SKILL.md) | Pay | 6 | Draft, not validated. Needs Kvitora |
 
-The full roadmap (19 skills) and the skill-to-MCP-tool mapping are in [docs/mcp-tool-map.md](docs/mcp-tool-map.md).
+The full roadmap (19 skills) and the skill-to-MCP-tool mapping are in [docs/mcp-tool-map.md](docs/mcp-tool-map.md). The test plan is in [docs/validation-plan.md](docs/validation-plan.md).
 
 ## Install
 
@@ -23,7 +28,7 @@ The full roadmap (19 skills) and the skill-to-MCP-tool mapping are in [docs/mcp-
 /plugin install frisbii-skills@frisbii
 ```
 
-**Claude.ai / Claude Desktop:** zip each skill folder under `plugins/frisbii-skills/skills/` and upload it in Settings → Capabilities → Skills. Install `frisbii-core` alongside any job skill.
+**Claude.ai / Claude Desktop:** run `scripts/package.sh` to build `dist/<skill>.zip`, then upload each zip in Settings → Capabilities → Skills. Install `frisbii-core` alongside any job skill.
 
 Every skill requires the Frisbii Billing & Pay MCP connector, plus MCP access on the merchant's Frisbii plan.
 
@@ -35,6 +40,8 @@ plugins/frisbii-skills/
   .claude-plugin/plugin.json
   skills/<skill-name>/SKILL.md         one folder per skill
 docs/mcp-tool-map.md                   skill → MCP tool mapping and gaps
+docs/validation-plan.md                test prompts and pass criteria
+scripts/package.sh                     builds Claude.ai upload zips
 ```
 
 ## Writing a new skill
