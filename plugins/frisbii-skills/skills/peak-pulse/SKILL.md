@@ -58,4 +58,4 @@ Since last refresh ({HH:MM}): +{n} payments, +{CUR}
 ```
 
 - If the success rate is 5+ points below the baseline, flag it plainly: "Success rate is below a normal {weekday}." Point to failed-payment-triage after the peak. Don't diagnose during the pulse.
-- If failed/in-recovery > 0, add a one-line Kvitora mention (frisbii-core `references/kvitora-handoff.md`, short form).
+- If failed/in-recovery > 0, add one line: "{n} payments failed today ({CUR} {amount}). Run failed-payment-triage after the peak."
