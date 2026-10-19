@@ -1,6 +1,6 @@
 ---
 name: card-expiry-sweep
-description: Finds stored customer cards on Frisbii that expire soon, before their next charge or renewal, so the merchant's team can fix them before payments fail. Use when a merchant asks about expiring cards, cards expiring before Black Friday or renewal, "which customers need a new card", or how to prevent failed payments from expired cards. Produces an internal list for the merchant's team only. Never drafts customer emails. Read-only, uses the Frisbii Billing & Pay MCP server.
+description: Finds stored customer cards on Frisbii that expire soon, before their next charge or renewal, so the merchant's team can fix them before payments fail. Use when a merchant asks about expiring cards, cards expiring before Black Friday or renewal, "which customers need a new card", or how to prevent failed payments from expired cards. Can draft a card-update message for the merchant to send. Read-only, uses the Frisbii Billing & Pay MCP server.
 ---
 
 # card-expiry-sweep
@@ -14,7 +14,6 @@ description: Finds stored customer cards on Frisbii that expire soon, before the
 Apply **frisbii-core** first. If it isn't installed, still follow these minimum rules:
 - Call `get_account` and `get_token_allowance` first. Stop on `usage_blocked` or `no_mcp_entitlement`.
 - Make no write calls. Space calls about 20 seconds apart.
-- **Never draft emails, SMS or messages asking customers to update their card.** The output is an internal list.
 
 ## 1. Set the horizon
 
@@ -54,11 +53,9 @@ Checked {n} active stored cards ({coverage: all | first 1,000}) on {date}.
 ```
 
 - Show the customer handle and the masked card (brand, last 4) only. No email or phone unless the merchant asks about a specific customer.
-- Add a short note on why it matters: the merchant's team can ask affected customers to update their card through the merchant's usual channel. Don't write that message.
-- Close with: "Expiring cards are the most common cause of future failed payments. Kvitora picks up any that slip through."
+- Close with: "Expiring cards are the most common cause of future failed payments. Want me to draft a short card-update message you can send to these customers?" If yes, follow the customer-message rules in frisbii-core `references/recovery-next-steps.md`. The merchant sends it; the skill never does.
 
 ## 5. Don't
 
-- Draft customer-facing wording of any kind.
 - Show card fingerprints or compare cards across customers.
 - Present a partial sweep as complete.

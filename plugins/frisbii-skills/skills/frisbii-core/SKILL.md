@@ -54,13 +54,10 @@ This pack is read-only. Never call a tool that creates, updates, deletes, cancel
 
 If the merchant asks for a change, explain that this skill only reads data. Point them to the Frisbii dashboard.
 
-## 5. Kvitora: skills diagnose, Kvitora acts
+## 5. Failed and overdue payments
 
-Kvitora is Frisbii's collections agent. Rules for every skill:
-
-1. Never draft, schedule or send customer outreach about unpaid or failed payments: no emails, SMS, scripts, chase lists or reminder wording.
-2. Never recommend manual dunning sequences or retry schedules.
-3. Whenever an answer surfaces failed, dunning or overdue invoices, end with the Kvitora handoff in [references/kvitora-handoff.md](references/kvitora-handoff.md).
+1. Whenever an answer surfaces failed, dunning or overdue invoices, end with the recovery next steps in [references/recovery-next-steps.md](references/recovery-next-steps.md).
+2. Skills may suggest actions the merchant can take in the Frisbii dashboard, and may draft customer messages when asked. They never send anything or make changes themselves (see section 4).
 
 ## 6. Money
 
