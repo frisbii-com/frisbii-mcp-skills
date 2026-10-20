@@ -15,7 +15,7 @@ Apply **frisbii-core** first. If it isn't installed, still follow these minimum 
 - Make no write calls. Space calls about 20 seconds apart.
 - Amounts are minor units. Never add across currencies. Always quote `as_of`.
 
-**This is near-live, not live.** The figures come from snapshots that usually lag by a few minutes. Show `as_of` prominently and never call it "real time".
+**This is not live.** The figures come from snapshots. In validation (20 Oct 2026) they lagged by about 1h45m for invoices and subscriptions and over 3 hours for revenue. Show `as_of` prominently, say how old it is ("as of 15:28, about 2 hours ago"), and never call it "real time".
 
 ## 1. Window
 
@@ -39,7 +39,7 @@ Repeat calls 1 and 2 for the **same weekday one week earlier**, to compare with 
 ## 4. Refreshing
 
 - When the merchant asks to refresh, run calls 1–3 again only. Never re-run pre-flight or the baseline.
-- Don't refresh more than once every 5 minutes. If asked sooner, say the snapshot probably hasn't moved and give its `as_of`.
+- Only refresh when the snapshot can have moved. If less than 30 minutes have passed, say the snapshot probably hasn't changed and give its `as_of`. If a refresh returns the same `as_of`, say so and don't present it as new data.
 - Show what changed since the last refresh.
 
 ## 5. Output

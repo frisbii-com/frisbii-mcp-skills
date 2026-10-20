@@ -6,7 +6,7 @@ description: Shows how a Frisbii merchant's customers pay. Covers payment-method
 # payment-method-mix
 
 **Product:** Pay. Also works for Billing.
-**Call budget:** 2 pre-flight calls + 4–7 calls, about 2–3 minutes.
+**Call budget:** 2 pre-flight calls + 3–4 calls, about 2 minutes.
 
 ## Before you start
 
@@ -19,7 +19,7 @@ Apply **frisbii-core** first. If it isn't installed, still follow these minimum 
 
 Default: the **last 90 days**. Peak variant: the same window as the merchant's last big campaign.
 
-**Why two time bases:** `count_transactions` filters on the **settlement** date, and failed transactions never settle. A period filter therefore shows successful volume only. Success rates come from an all-time breakdown instead (call 2), and outstanding failures for the period come from `count_open_transactions` (call 3). Label each figure with its basis.
+**Why two time bases:** `count_transactions` filters on the **settlement** date, and failed transactions never settle. A period filter therefore shows successful volume only. Success rates and failed payments per method come from an all-time breakdown instead (call 2). Label each figure with its basis. Don't use `count_open_transactions` for failures: validation showed it counts only a handful of open transactions, not failed payments.
 
 ## 2. Calls
 
@@ -27,9 +27,8 @@ Default: the **last 90 days**. Peak variant: the same window as the merchant's l
 |---|---|---|---|
 | 1 | `count_transactions` | `settled_from`, `settled_to`, `state=settled`, `group_by=payment_type` | **Mix for the period:** settled count and volume per method |
 | 2 | `count_transactions` | `group_by=payment_type,state` (no dates) | **Success rate per method, all time:** settled vs failed vs other states |
-| 3 | `count_open_transactions` | `invoice_created_from`, `invoice_created_to`, `payment_type=` the top method | Outstanding unsettled transactions for the period. Repeat for the top 2–3 methods only (no group_by on this tool) |
-| 4 | `count_customers` | `group_by=country`, `group_limit=10` | Where customers are based |
-| 5 (optional) | `count_transactions` | the previous period of the same length, `state=settled`, `group_by=payment_type` | Mix trend |
+| 3 | `count_customers` | `group_by=country`, `group_limit=10` | Where customers are based |
+| 4 (optional) | `count_transactions` | the previous period of the same length, `state=settled`, `group_by=payment_type` | Mix trend |
 
 ## 3. Derive
 
@@ -50,8 +49,8 @@ Default: the **last 90 days**. Peak variant: the same window as the merchant's l
 ### Success rate by method (all time)
 | Method | Settled | Failed | Success rate |
 
-### Outstanding failures ({window}, by invoice date)
-| Method | Open transactions |
+### Failed payments by method (all time)
+| Method | Failed | Failed volume |
 
 ### Customers by country (top 10)
 | Country | Customers |

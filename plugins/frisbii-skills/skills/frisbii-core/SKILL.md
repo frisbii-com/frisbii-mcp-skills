@@ -46,6 +46,9 @@ The server allows about **3 calls per minute**.
 - Use `list_*` and `get_*` only for named rows (one customer, one invoice, a top-10 list). Ask for `limit` 10–20 and stop paging once you have what the answer needs.
 - Before a multi-call report, tell the merchant roughly how long it takes ("This takes about 8 calls, roughly 3 minutes").
 - Space calls about 20 seconds apart. If a call fails with a rate-limit error, wait 60 seconds and retry once. If it fails again, report what you have so far and name what is missing.
+- `error: report_pending` ("the report is being computed") means the snapshot report is still building. Wait about a minute and retry once; if it is still pending, skip that figure and say it wasn't ready.
+- `error: invalid_group_by` lists the columns the report can group by. Don't retry with a guess; drop the breakdown or use one of the listed columns.
+- `list_*` tools return about 10 rows per page whatever `limit` you pass. Follow `next_page_token` only as far as the answer needs.
 - Never fire the same call twice to "check". Reuse results you already have in this conversation.
 
 ## 4. Read-only
@@ -73,7 +76,10 @@ If the merchant asks for a change, explain that this skill only reads data. Poin
 - Pass dates as `YYYY-MM-DD`. For a calendar month, send the first day of the month as `*_from` and the first day of the next month as `*_to`. Then read `extra.window` (where returned) and quote the range the server actually applied.
 - Snapshot tools return `as_of`. Always show it ("as of 19 Oct 2026, 14:05"). If two figures in one report have `as_of` values more than an hour apart, say so.
 - Live (`list_*`/`get_*`) and snapshot (`count_*`) figures can differ slightly. That is expected; don't try to reconcile them.
-- `list_failed_payments`, `list_charges` and `list_settlements` default to roughly the **last month** when called without a date filter (and without `customer_handle`). Never present those results as all-time figures.
+- `list_failed_payments`, `list_charges`, `list_settlements`, `list_payment_methods` and `investigate_dunning_invoices` default to roughly the **last month** (by creation date) when called without a date filter and without `customer_handle`. Read `extra.window`. Never present those results as all-time figures; use a `count_*` tool for totals.
+- Snapshots can lag by **hours**, not minutes (about 1h45m to 3h20m in validation on 20 Oct 2026). Say how old each snapshot is when it matters, e.g. on a busy day.
+- Snapshot rows return states in upper case (`ACTIVE`, `SETTLED`, `FAILED`). Treat them the same as the lower-case filter values.
+- `count_open_transactions` counts only a few transactions still open on unsettled invoices. It is not a measure of failed payments; use `count_transactions` with `state=failed` or `count_invoices` instead.
 
 ## 8. Subscription end dates: pick the right one
 

@@ -25,9 +25,9 @@ Default: invoices **due in the last 90 days**. Recovery takes weeks, so shorter 
 |---|---|---|---|
 | 1 | `list_dunning_plans` | – | Every dunning plan: retry schedule (days), grace period, final action, default flag |
 | 2 | `count_invoices` | `dunning_invoices=true` | Everything in dunning now: count and amount |
-| 3 | `investigate_dunning_invoices` | `limit=100` (max 2 pages) | Current step, next retry date and days overdue per invoice |
+| 3 | `investigate_dunning_invoices` | – (max 2 pages) | Current step, next retry date and days overdue per invoice. Without `customer_handle` it covers invoices **created in the last 30 days** only (`extra.window`) and ignores `limit`; use call 2's count for the total in dunning |
 | 4 | `count_invoices` | `due_from`, `due_to`, `group_by=state` | Outcomes for the window: settled, dunning, failed, cancelled |
-| 5–7 | `list_invoices` | `state=settled`, `due_from`, `due_to`, `limit=100` (max 3 pages) | Settled invoices. Those carrying a dunning start timestamp were **recovered** through dunning. Use both timestamps for time to recover |
+| 5–7 | `list_invoices` | `state=settled`, `due_from`, `due_to`, `limit=100` (max 3 pages) | Settled invoices. Those with a `dunning_start` timestamp were **recovered** through dunning; use `dunning_start` and `settled` for time to recover. Skip zero-amount invoices. On large accounts few settled invoices went through dunning, so the sample can be thin; say how many recovered invoices the figure rests on |
 | 8 (optional) | `list_invoices` | `state=failed`, `due_from`, `due_to`, `limit=100` | Invoices that left dunning unpaid (**lost**) |
 
 If the page caps cut anything off, label recovered and lost figures as "based on a sample of {n} invoices".
