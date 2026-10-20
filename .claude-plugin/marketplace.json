@@ -1,0 +1,13 @@
+{
+  "name": "frisbii",
+  "owner": {
+    "name": "Frisbii"
+  },
+  "plugins": [
+    {
+      "name": "frisbii-skills",
+      "source": "./plugins/frisbii-skills",
+      "description": "Read-only skills for Frisbii Billing and Frisbii Pay merchants, built on the Frisbii Billing & Pay MCP server."
+    }
+  ]
+}
