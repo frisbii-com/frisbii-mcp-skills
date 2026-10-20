@@ -30,6 +30,8 @@ All skills are **read-only**: they never change anything in Frisbii or send anyt
 
 All 19 skills from the roadmap are drafted. The full roadmap and the skill-to-MCP-tool mapping are in [docs/mcp-tool-map.md](docs/mcp-tool-map.md). The test plan is in [docs/validation-plan.md](docs/validation-plan.md).
 
+Each skill has a page in the Confluence space SKILL, under [Frisbii MCP Skills Pack](https://billwerk.atlassian.net/wiki/spaces/SKILL/pages/11604590602). The weekly plan is on [Skill of the Week: marketing calendar](https://billwerk.atlassian.net/wiki/spaces/SKILL/pages/11604131885). The pages are generated from this repo; see `CLAUDE.md` for how they stay in sync.
+
 ## Install
 
 **Claude Code**
@@ -53,6 +55,11 @@ plugins/frisbii-skills/
 docs/mcp-tool-map.md                   skill → MCP tool mapping and gaps
 docs/validation-plan.md                test prompts and pass criteria
 scripts/package.sh                     builds Claude.ai upload zips
+scripts/confluence_page.py             renders the Confluence pages from SKILL.md + docs/confluence/pages.json
+scripts/set_page_id.py                 records a Confluence page ID in pages.json
+docs/confluence/pages.json             Confluence page IDs and page copy
+docs/marketing-calendar.md             source of the marketing calendar page
+docs/Frisbii_MCP_Skills_Pack_and_13_Week_Plan.xlsx   planning sheet with feasibility notes
 ```
 
 ## Writing a new skill
