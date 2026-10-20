@@ -6,7 +6,7 @@ description: Churn and retention analysis for a Frisbii Billing merchant. Shows 
 # churn-and-retention
 
 **Product:** Billing. Also works for Pay merchants running subscriptions on Pay.
-**Call budget:** 2 pre-flight calls + 9–10 calls, about 4 minutes.
+**Call budget:** 2 pre-flight calls + 8 calls, about 3–4 minutes.
 
 ## Before you start
 
@@ -30,9 +30,8 @@ Default: the **last three full calendar months**, reported month by month, plus 
 | 6 | `get_committed_recurring_revenue` | `group_by=plan` | MRR already asked to stop: the forward view |
 | 7 | `count_subscriptions` | `state=on_hold` | Paused subscriptions (an at-risk segment) |
 | 8 | `count_customers` | `min_dunning_amount=1` | Customers with invoices in dunning (involuntary churn risk), with `dunning_amount_sum` |
-| 9 | `count_subscriptions` | `ended_*` = whole window, `group_by=expire_reason` | Voluntary vs involuntary split. **If this group_by is refused, skip it** and use the fallback below |
 
-**Fallback for the voluntary vs involuntary split:** offer `create_report_export` (report `subscriptions`, filters `ended_from`/`ended_to`) and read the expire reason from the rows if present. If neither works, say: "The split by reason isn't available from the MCP yet." Never guess it.
+**Voluntary vs involuntary split:** subscriptions can't be counted by expire reason (`count_subscriptions` groups only by `state`, `plan` and `scheduled_cancellation`). Offer `create_report_export` (report `subscriptions`, filters `ended_from`/`ended_to`) and read the expire reason from the rows if present. If neither works, say: "The split by reason isn't available from the MCP yet." Never guess it.
 
 Expire reasons: `dunning` = involuntary (payment failure). Anything else (`cancelled`, `ondemand`, `fixed`, …) = voluntary or planned.
 

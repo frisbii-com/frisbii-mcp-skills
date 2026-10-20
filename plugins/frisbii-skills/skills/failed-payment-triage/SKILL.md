@@ -25,11 +25,11 @@ Default: the **last 30 days** by due date. Name the window you used. Peak-week v
 |---|---|---|---|
 | 1 | `count_invoices` | `due_from`, `due_to`, `group_by=state` | Failed and dunning counts and amounts vs settled (failure rate) |
 | 2 | `count_invoices` | `dunning_invoices=true` | Everything currently in the dunning flow, all time |
-| 3 | `list_failed_payments` | `limit=100` | Up to 100 recent failed invoices with embedded transactions and error detail (about a one-month window; read `extra.window`) |
+| 3 | `list_failed_payments` | `limit=50` | Recent failed invoices with embedded transactions and error detail (about a one-month window; read `extra.window`). Responses are large: one invoice can carry many retry transactions |
 | 4 | `investigate_failed_or_overdue_billing` | `due_from`, `due_to` | Overdue and failed invoices with customer, amount, due date, dunning step |
 | 5 (optional) | `list_dunning_plans` | – | Whether failed invoices are covered by dunning at all |
 
-If call 3 returns more than 100 rows, classify the first page only and label it a sample: "Reasons based on the 100 most recent failures". For the full set, offer `create_report_export` with `report=open_transactions`, which carries acquirer codes for every outstanding transaction.
+Classify the first page only and label it a sample: "Reasons based on the {n} most recent failures". Classify each invoice by its **latest** transaction. Invoices with an empty `transactions` list have no decline detail: put them in a "no transaction detail" bucket. For the full set, offer `create_report_export` with `report=open_transactions`, which carries acquirer codes for every outstanding transaction.
 
 ## 3. Classify reasons (from call 3)
 
