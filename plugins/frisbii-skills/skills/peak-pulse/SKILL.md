@@ -6,7 +6,6 @@ description: Near-live pulse of payments and sign-ups during a peak such as Blac
 # peak-pulse
 
 **Product:** Pay. The sign-up view also covers Billing.
-**Featured:** week 5 (23 Nov 2026, Black Friday). Used heavily 27–30 Nov.
 **Call budget:** 2 pre-flight calls (once) + 3 calls per refresh, about 1 minute. A baseline adds 2 calls, once.
 
 ## Before you start
