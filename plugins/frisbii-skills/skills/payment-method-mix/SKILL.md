@@ -6,7 +6,6 @@ description: Shows how a Frisbii merchant's customers pay. Covers payment-method
 # payment-method-mix
 
 **Product:** Pay. Also works for Billing.
-**Featured:** week 4 (16 Nov 2026), Pay alternative to promo-readiness.
 **Call budget:** 2 pre-flight calls + 4–7 calls, about 2–3 minutes.
 
 ## Before you start

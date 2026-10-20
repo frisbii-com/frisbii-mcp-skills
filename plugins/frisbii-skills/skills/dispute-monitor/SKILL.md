@@ -6,7 +6,6 @@ description: Chargeback and dispute overview for a Frisbii account. Shows disput
 # dispute-monitor
 
 **Product:** Pay. Also works for Billing.
-**Featured:** week 7 (7 Dec 2026), Pay alternative to promo-cohort-quality.
 **Call budget:** 2 pre-flight calls + 5 calls, about 2 minutes.
 
 ## Before you start

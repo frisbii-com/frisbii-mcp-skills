@@ -6,7 +6,6 @@ description: Churn and retention analysis for a Frisbii Billing merchant. Shows 
 # churn-and-retention
 
 **Product:** Billing. Also works for Pay merchants running subscriptions on Pay.
-**Featured:** week 12 (11 Jan 2027, January churn season).
 **Call budget:** 2 pre-flight calls + 9–10 calls, about 4 minutes.
 
 ## Before you start

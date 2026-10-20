@@ -6,7 +6,6 @@ description: Housekeeping check of a Frisbii account. Finds subscriptions stuck 
 # account-hygiene
 
 **Product:** Both. Strongest for Billing.
-**Featured:** week 3 (9 Nov 2026), Billing alternative to card-expiry-sweep.
 **Call budget:** 2 pre-flight calls + 7 checks, about 3 minutes.
 
 ## Before you start
