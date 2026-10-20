@@ -6,7 +6,6 @@ description: Reviews how well a Frisbii account's dunning (failed-payment retry)
 # dunning-review
 
 **Product:** Pay. Also works for Billing.
-**Featured:** week 13 (18 Jan 2027), Pay alternative to migration-from-transform.
 **Call budget:** 2 pre-flight calls + 6–9 calls, about 3–4 minutes.
 
 ## Before you start

@@ -6,7 +6,6 @@ description: Compares a Frisbii merchant's subscription plans. Shows which plans
 # plan-performance
 
 **Product:** Billing. Also works for Pay merchants running subscriptions on Pay.
-**Featured:** not yet scheduled (candidate for Q1).
 **Call budget:** 2 pre-flight calls + 6–8 calls, about 3 minutes.
 
 ## Before you start

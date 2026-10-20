@@ -6,7 +6,6 @@ description: Quarter-end or year-end board summary for a Frisbii Billing merchan
 # board-pack
 
 **Product:** Billing. Also works for Pay merchants running subscriptions on Pay.
-**Featured:** week 11 (4 Jan 2027, Q4 / year-end close). Showcase for branded deck output.
 **Call budget:** 2 pre-flight calls + about 12 calls, about 5 minutes.
 
 ## Before you start
