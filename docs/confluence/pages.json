@@ -638,7 +638,7 @@
       "week": "Week 13 (18 Jan 2027), start of the Q1 migration mini-series",
       "what": [
         "Asks where the merchant is in the move, then either walks through a seven-phase plan (inventory, concept mapping, payment-method token migration with Frisbii, catalogue build, test, cut-over, verify), runs a readiness check of the Billing catalogue (plans, add-ons, coupons, discounts, dunning plans), or compares the merchant's Transform totals with Frisbii Billing side by side.",
-        "The MCP only sees the Billing side, so Transform figures come from the merchant. The skill never creates anything and never asks for card data."
+        "The MCP only sees the Billing side, so Transform figures come from the merchant. The skill never creates anything and never asks for card data. For the code side of the move (Transform API calls, SubscriptionJS signup, portal, webhooks, cut-over) it points developers to the [Frisbii Transform Migration Toolkit](https://billwerk.atlassian.net/wiki/spaces/SKILL/pages/11604230630), starting with `transform-integration-assess`."
       ],
       "triggers": [
         "Migrating or moving from Frisbii Transform to Frisbii Billing.",
@@ -656,6 +656,10 @@
         [
           "\"Check our migration\" (with Transform totals)",
           "A Transform vs Billing comparison with differences above 1% flagged"
+        ],
+        [
+          "\"What do our developers need to change in our code?\"",
+          "A pointer to the Frisbii Transform Migration Toolkit and its `transform-integration-assess` skill, with the install commands"
         ]
       ],
       "related": [
@@ -665,7 +669,7 @@
       ],
       "notes": [
         "Draft migration content: must be reviewed by Frisbii's migration team before release.",
-        "Complements the [Frisbii Migration Toolkit](https://billwerk.atlassian.net/wiki/spaces/SKILL/pages/11604230630) (frisbii-com/frisbii-migration-toolkit), which re-codes the customer's own integration (API, checkout, portal, webhooks, cut-over). This skill covers migration planning and checking the migrated Billing data with the MCP; align the two before launch.",
+        "Complements the [Frisbii Transform Migration Toolkit](https://billwerk.atlassian.net/wiki/spaces/SKILL/pages/11604230630) (frisbii-com/frisbii-transform-migration-toolkit), which re-codes the customer's own integration (API, checkout, portal, webhooks, cut-over). This skill covers migration planning and checking the migrated Billing data with the MCP; align the two before launch.",
         "Not yet validated against live data."
       ]
     },
