@@ -6,7 +6,6 @@ description: Pre-campaign check of Frisbii coupons, discounts and plans before a
 # promo-readiness
 
 **Product:** Billing. Also works for Pay merchants using coupons on subscriptions.
-**Featured:** week 4 (16 Nov 2026, Black Friday prep #2).
 **Call budget:** 2 pre-flight calls + 3–8 calls, about 2–4 minutes.
 
 ## Before you start

@@ -6,7 +6,6 @@ description: Lists annual and high-value Frisbii subscription renewals coming up
 # renewal-radar
 
 **Product:** Billing.
-**Featured:** week 8 (14 Dec 2026, pre-January renewals).
 **Call budget:** 2 pre-flight calls + 3–12 calls, about 2–5 minutes depending on how many annual subscriptions exist.
 
 ## Before you start

@@ -6,7 +6,6 @@ description: Guides Frisbii Transform customers through moving to Frisbii Billin
 # migration-from-transform
 
 **Product:** Billing, for Frisbii Transform customers.
-**Featured:** week 13 (18 Jan 2027). Starts a Q1 migration mini-series.
 **Call budget:** none for the guidance parts. 2 pre-flight calls + 5–7 calls for the post-migration check.
 
 > **Content owner:** the migration specifics below (steps, mapping, what Frisbii support handles) are a draft. Frisbii's migration team must review them before release.

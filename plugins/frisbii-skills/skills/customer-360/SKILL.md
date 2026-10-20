@@ -6,7 +6,6 @@ description: One-page briefing on a single Frisbii customer before a call or mee
 # customer-360
 
 **Product:** Both (Pay and Billing).
-**Featured:** week 2 (2 Nov 2026).
 **Call budget:** 2 pre-flight calls + 2–5 lookup calls, about 1–2 minutes.
 
 ## Before you start

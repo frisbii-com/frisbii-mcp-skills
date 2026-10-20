@@ -6,7 +6,6 @@ description: Reconciles Frisbii payouts for a period against what was captured, 
 # payout-reconciliation
 
 **Product:** Pay. Also works for Billing.
-**Featured:** Pay alternative in weeks 1 (26 Oct 2026) and 11 (4 Jan 2027).
 **Call budget:** 2 pre-flight calls + 3 calls + 1 per payout (max 10), about 2–6 minutes.
 
 ## Before you start
