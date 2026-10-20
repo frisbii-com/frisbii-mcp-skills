@@ -1,13 +1,4 @@
-This is the rolling calendar for the **Skill of the Week** series. Each week has one marketing moment, built around one installable skill from the [Frisbii MCP Skills Pack](https://billwerk.atlassian.net/wiki/spaces/SKILL/pages/11604590602), with an alternate skill for the other product audience. The goal is adoption of the **Frisbii Billing & Pay MCP server**: merchants connect it, install the pack and come back each week to a new, practical use.
-
-|  |  |
-| --- | --- |
-| **Series window** | Weeks 1–13: 26 Oct 2026 – 18 Jan 2027 (rolling: new weeks are added as the series continues) |
-| **Owner** | Martyn Arbon |
-| **Key dates** | Month ends 30 Oct, 30 Nov, 31 Dec · Black Friday 27 Nov · Cyber Monday 30 Nov · Q4 / year end 31 Dec |
-| **Release rule** | Each skill is released a few days before its episode ("ready by"), so early adopters can try it first |
-| **Source** | Frisbii MCP Skills Pack and 13-week plan spreadsheet (13-week plan tab); skills in frisbii-com/frisbii-mcp-skills |
-| **Status** | Plan. All skills drafted; none validated on live data yet (MCP entitlement pending) |
+This is the rolling calendar for the **Skill of the Week** series. Each week has one marketing moment, built around one installable skill from the [Frisbii MCP Skills Pack](https://billwerk.atlassian.net/wiki/spaces/SKILL/pages/11604590602), with an alternate skill for the other product audience. 
 
 ## At a glance
 

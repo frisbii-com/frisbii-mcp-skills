@@ -21,15 +21,16 @@ Every skill has a page in the Confluence space **SKILL** (Skills Central, site `
 **Whenever you change a skill, update its Confluence page in the same task.** That applies to any change under `plugins/frisbii-skills/skills/<skill>/` (SKILL.md, references, scripts), and to a change in its `docs/confluence/pages.json` entry.
 
 1. If the change affects what the page says (behaviour, triggers, examples, limitations, product, week, status), update that skill's entry in `docs/confluence/pages.json` first. Name, product, call budget, files and section headings are read from `SKILL.md` automatically.
-2. Run `python3 scripts/confluence_page.py <skill>` and publish the output with `updateConfluencePage`:
+2. Before publishing, read the live page (`getConfluencePage`, markdown). If someone edited it in Confluence since the last publish (the version message lacks "Owner: Martyn Arbon", or the content differs from the render), carry those edits into `pages.json`, `docs/marketing-calendar.md` or the renderer first, so publishing doesn't undo them.
+3. Run `python3 scripts/confluence_page.py <skill>` and publish the output with `updateConfluencePage`:
    - `cloudId`: `billwerk.atlassian.net`; `pageId`: the skill's `page_id`; `title`: the skill name;
    - `contentFormat`: `markdown`; `body`: the script output, unchanged;
    - `versionMessage`: `Owner: Martyn Arbon. <one-line summary of the change>`.
-3. If the change affects the overview (a new or removed skill, a summary, product or week change), also publish `--overview` to page `11604590602` in the same way.
-4. **New skill:** add an entry to `pages.json` (with `"page_id": null`), create the page with `createConfluencePage` (space `11604230148`, parent `11604590602`, title = skill name, `contentFormat: markdown`), record the ID with `python3 scripts/set_page_id.py <skill> <page-id>`, then republish the overview.
-5. **Removed or renamed skill:** update `pages.json` and the overview, and ask the owner before deleting or renaming the Confluence page.
-6. **Calendar changes** (`docs/marketing-calendar.md`, or a skill moving week): update the markdown, the skill's `week` in `pages.json`, then publish `--calendar` to page `11604131885` and the affected skill pages.
-7. Commit the `pages.json` changes together with the skill change, and report the updated page links.
+4. If the change affects the overview (a new or removed skill, a summary, product or week change), also publish `--overview` to page `11604590602` in the same way.
+5. **New skill:** add an entry to `pages.json` (with `"page_id": null`), create the page with `createConfluencePage` (space `11604230148`, parent `11604590602`, title = skill name, `contentFormat: markdown`), record the ID with `python3 scripts/set_page_id.py <skill> <page-id>`, then republish the overview.
+6. **Removed or renamed skill:** update `pages.json` and the overview, and ask the owner before deleting or renaming the Confluence page.
+7. **Calendar changes** (`docs/marketing-calendar.md`, or a skill moving week): update the markdown, the skill's `week` in `pages.json`, then publish `--calendar` to page `11604131885` and the affected skill pages.
+8. Commit the `pages.json` changes together with the skill change, and report the updated page links.
 
 If Confluence can't be reached, finish the repo change, say which pages still need publishing, and don't claim they are in sync.
 

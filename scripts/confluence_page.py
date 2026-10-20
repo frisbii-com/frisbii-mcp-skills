@@ -171,7 +171,7 @@ def render_overview():
             "* Snapshot figures always show their as-of time; money is never added across currencies.", "",
             "## Related", "",
             f"* [{META['calendar']['title']}]({page_url(META['calendar']['page_id'])}): which skill is featured each week and what it drives adoption of.",
-            f"* [Frisbii Agent Toolkit]({page_url('11604099086')}): skills for developers building Frisbii integrations.",
+            f"* [Frisbii Developer Toolkit]({page_url('11604099086')}): skills for developers building Frisbii integrations.",
             ]
     return "\n".join(out) + "\n"
 

@@ -665,7 +665,7 @@
       ],
       "notes": [
         "Draft migration content: must be reviewed by Frisbii's migration team before release.",
-        "Overlaps with the Transform → Billing migration plugin in billwerk/frisbii-migration (agent-plugin/) distributed by Customer Success; align before launch.",
+        "Complements the [Frisbii Migration Toolkit](https://billwerk.atlassian.net/wiki/spaces/SKILL/pages/11604230630) (frisbii-com/frisbii-migration-toolkit), which re-codes the customer's own integration (API, checkout, portal, webhooks, cut-over). This skill covers migration planning and checking the migrated Billing data with the MCP; align the two before launch.",
         "Not yet validated against live data."
       ]
     },
@@ -750,7 +750,7 @@
   "calendar": {
     "title": "Skill of the Week: marketing calendar",
     "page_id": "11604131885",
-    "parent_id": "11604590602",
+    "parent_id": "11604230575",
     "source": "docs/marketing-calendar.md"
   }
 }
