@@ -26,7 +26,7 @@ Default: **1 Jan to today** of the current year (`*_from=2026-01-01`, `*_to=tomo
 | # | Tool | Arguments | Gives |
 |---|---|---|---|
 | P1 | `count_transactions` | `settled_from`, `settled_to`, `state=settled`, `group_by=payment_type` | Volume and count by method |
-| P2 | `count_transactions` | same, `group_by=settled_month` | Month-by-month volume and the best month. If this `group_by` is refused, skip the monthly view and say so |
+| P2 (only if asked) | `count_transactions` | one call per month, `settled_*` = that month, `state=settled` | Month-by-month volume and the best month. Transactions can't be grouped by month, so this costs up to 12 calls (about 4 minutes). Offer it; don't run it by default |
 | P3 | `count_transactions` | last year's span, `state=settled` | Year-on-year growth |
 
 **Subscriptions (if live subscriptions > 0):**

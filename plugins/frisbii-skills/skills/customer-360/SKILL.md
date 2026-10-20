@@ -36,7 +36,7 @@ If none match, say so. Suggest a different spelling or the exact email.
 - the profile
 - **all** subscriptions, in every state
 - `open_invoices` (pending, dunning, failed)
-- `recent_invoices` (never overlaps open_invoices)
+- `recent_invoices` (never overlaps open_invoices). It can hold the customer's whole history (90+ invoices for a long-standing customer), so read only the most recent ones you need
 - payment methods, in every state, including deleted ones. Only `state=active` methods can be charged.
 
 For most briefings this one call is enough.
@@ -54,7 +54,7 @@ Don't call `get_subscription`, `get_invoice` or `list_charges` unless the mercha
 
 ## 4. Card expiry
 
-For each active card payment method, compare its expiry date with the next renewal date of each live subscription. Flag it when the card expires **before** the next renewal: "Card ending 4242 expires 11/26, before the 1 Dec renewal." Offer to draft a short "please update your card" message for the merchant to send.
+A card can be `active` and already past its expiry date (`exp_date` is `MM-YY`); flag that as expired. For each active card payment method, compare its expiry date with the next renewal date of each live subscription. Flag it when the card expires **before** the next renewal: "Card ending 4242 expires 11/26, before the 1 Dec renewal." Offer to draft a short "please update your card" message for the merchant to send.
 
 ## 5. Output
 
