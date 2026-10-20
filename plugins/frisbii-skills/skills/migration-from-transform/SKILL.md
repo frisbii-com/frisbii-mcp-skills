@@ -19,6 +19,13 @@ Apply **frisbii-core** first for any data calls. If it isn't installed, still fo
 
 The MCP only sees the **Frisbii Billing** side. Transform data comes from the merchant, as a summary or an export file they upload.
 
+**Code changes are out of scope here.** This skill covers the migration plan and checking the migrated Billing data. To re-code the merchant's own integration (Transform REST calls, SubscriptionJS signup and payment forms, self-service portal, webhooks, cut-over), point their developers to the **Frisbii Transform Migration Toolkit**: repository `frisbii-com/frisbii-transform-migration-toolkit`, plugin `frisbii-migration-from-transform`, starting with the `transform-integration-assess` skill. Install it in Claude Code with:
+
+```
+/plugin marketplace add frisbii-com/frisbii-transform-migration-toolkit
+/plugin install frisbii-migration-from-transform@frisbii-transform-migration-toolkit
+```
+
 ## 1. Find out where they are
 
 Ask one question: "Are you planning the move, partway through, or checking a finished migration?" Then go to section 2, 3 or 4.
@@ -27,12 +34,12 @@ Ask one question: "Are you planning the move, partway through, or checking a fin
 
 Walk through these phases. Tailor them to what the merchant says about their setup:
 
-1. **Inventory (Transform).** Plans and price points, add-ons, discounts and coupons, number of customers and active subscriptions, billing cycles and renewal dates, payment methods in use, dunning settings, integrations (webhooks, accounting, CRM).
+1. **Inventory (Transform).** Plans and price points, add-ons, discounts and coupons, number of customers and active subscriptions, billing cycles and renewal dates, payment methods in use, dunning settings, integrations (webhooks, accounting, CRM). For the integrations, suggest the Frisbii Transform Migration Toolkit's `transform-integration-assess` skill, which finds every Transform touchpoint in their code.
 2. **Map concepts** to Frisbii Billing: plans, add-ons, discounts (templates) and coupons (codes), customers, subscriptions, dunning plans. Note anything with no direct equivalent and raise it with Frisbii early.
 3. **Payment methods.** Stored cards and mandates usually move through a secure token migration run by Frisbii and the payment providers, not by export. Plan for it with Frisbii support. Never ask the merchant to send card data.
 4. **Build the catalogue** in Frisbii Billing (dashboard or with Frisbii): plans, add-ons, discounts, coupons, dunning plans.
 5. **Test** with a handful of customers, then compare totals (section 4).
-6. **Cut over:** time it to avoid renewal peaks. Freeze changes in Transform. Import customers and subscriptions with the correct next renewal dates so nobody is double-charged or skipped.
+6. **Cut over:** time it to avoid renewal peaks. Freeze changes in Transform. Customer data (customers, subscriptions, catalogue, payment methods) is moved by Frisbii's migration team with the Frisbii migration tool, with the correct next renewal dates so nobody is double-charged or skipped. The merchant's integration switches over at the same time; the Transform Migration Toolkit's `transform-integration-cutover` skill covers that side.
 7. **Verify and decommission:** run the post-migration check, then switch off billing in Transform.
 
 Offer a checklist the merchant can copy, with an owner and a date per phase.
