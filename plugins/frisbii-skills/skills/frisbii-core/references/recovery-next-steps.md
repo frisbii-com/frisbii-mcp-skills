@@ -9,6 +9,7 @@ Use this block at the end of any answer that surfaced failed, dunning or overdue
 > - Run **failed-payment-triage** to see why these fail and what looks recoverable.
 > - Review your dunning plans and retry settings in the Frisbii dashboard (**dunning-review** shows how they perform).
 > - For hard declines (expired or closed cards), the customer has to add a new payment method.
+> - If the **frisbii-actions** plugin is installed, **failed-payment-recovery** can retry the soft declines, with your confirmation.
 
 Drop any bullet that names the skill already running.
 

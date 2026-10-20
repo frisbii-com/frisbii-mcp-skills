@@ -8,6 +8,11 @@
       "name": "frisbii-skills",
       "source": "./plugins/frisbii-skills",
       "description": "Read-only skills for Frisbii Billing and Frisbii Pay merchants, built on the Frisbii Billing & Pay MCP server."
+    },
+    {
+      "name": "frisbii-actions",
+      "source": "./plugins/frisbii-actions",
+      "description": "Opt-in action skills that make changes in Frisbii (retries, coupons, retention offers, clean-up, dunning settings, catalogue), always previewed and confirmed by the merchant first."
     }
   ]
 }

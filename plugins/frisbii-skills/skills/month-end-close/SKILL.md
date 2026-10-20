@@ -6,7 +6,6 @@ description: Month-end close report for Frisbii Billing merchants. Shows recurri
 # month-end-close
 
 **Product:** Billing. It also works for Pay merchants running subscriptions on Pay.
-**Featured:** week 1 (26 Oct 2026, launch). Refresher in week 6 for the November close.
 **Call budget:** 2 pre-flight calls + 8 report calls, about 3–4 minutes at the rate limit.
 
 ## Before you start
