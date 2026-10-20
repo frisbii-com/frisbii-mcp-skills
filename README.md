@@ -25,6 +25,8 @@ All skills are **read-only**: they never change anything in Frisbii or send anyt
 | [churn-and-retention](plugins/frisbii-skills/skills/churn-and-retention/SKILL.md) | Billing | 12 | Draft, not validated |
 | [migration-from-transform](plugins/frisbii-skills/skills/migration-from-transform/SKILL.md) | Billing (Transform customers) | 13 | Draft, not validated. Content needs migration-team review |
 | [dunning-review](plugins/frisbii-skills/skills/dunning-review/SKILL.md) | Pay | 13 (alt) | Draft, not validated |
+| [payment-method-mix](plugins/frisbii-skills/skills/payment-method-mix/SKILL.md) | Pay | 4 (alt) | Draft, not validated |
+| [plan-performance](plugins/frisbii-skills/skills/plan-performance/SKILL.md) | Billing | Unscheduled | Draft, not validated |
 
 ## Install
 
