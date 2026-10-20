@@ -6,7 +6,6 @@ description: Shareable annual recap of a merchant's year on Frisbii. Covers paym
 # year-in-review
 
 **Product:** Both. Pay and Billing sections are chosen automatically.
-**Featured:** week 9 (21 Dec 2026, holiday week). Built to be shared on LinkedIn.
 **Call budget:** 2 pre-flight calls + 2 detection calls + 5–8 calls, about 3–4 minutes.
 
 ## Before you start

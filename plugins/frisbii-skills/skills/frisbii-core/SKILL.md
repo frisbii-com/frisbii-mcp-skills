@@ -52,7 +52,7 @@ The server allows about **3 calls per minute**.
 
 This pack is read-only. Never call a tool that creates, updates, deletes, cancels, pauses, resumes, refunds, retries, voids, charges or applies anything. That includes every `create_*`, `update_*`, `delete_*`, `cancel_*`, `pause_*`, `resume_*`, `refund_*`, `retry_*`, `void_*`, `apply_*`, `remove_*`, `add_payment_method` and `set_default_payment_method` tool. The one exception is `create_report_export`, which only builds a file and changes nothing. Use it only when the merchant asks for the rows behind a figure.
 
-If the merchant asks for a change, explain that this skill only reads data. Point them to the Frisbii dashboard.
+If the merchant asks for a change, explain that this skill only reads data. Point them to the Frisbii dashboard, or to the separate **frisbii-actions** plugin if it is installed (it makes changes only after the merchant confirms each one).
 
 ## 5. Failed and overdue payments
 

@@ -6,7 +6,6 @@ description: Compares subscribers acquired with a discount (e.g. a Black Friday 
 # promo-cohort-quality
 
 **Product:** Billing. Also works for Pay merchants running subscriptions on Pay.
-**Featured:** week 7 (7 Dec 2026, post-BFCM). Early read in December. Repeat in February for a fuller picture.
 **Call budget:** 2 pre-flight calls + 6–8 calls, about 3 minutes.
 
 ## Before you start

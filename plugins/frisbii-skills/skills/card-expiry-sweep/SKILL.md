@@ -6,7 +6,6 @@ description: Finds stored customer cards on Frisbii that expire soon, before the
 # card-expiry-sweep
 
 **Product:** Pay (cards on file). Also works for Billing merchants.
-**Featured:** week 3 (9 Nov 2026, Black Friday prep #1). Refresher in week 8.
 **Call budget:** 2 pre-flight calls + 1 call per 100 stored cards (capped at 10 pages) + up to 5 renewal checks. About 2–6 minutes.
 
 ## Before you start

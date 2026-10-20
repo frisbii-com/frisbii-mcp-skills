@@ -1,0 +1,10 @@
+{
+  "name": "frisbii-actions",
+  "version": "0.1.0",
+  "description": "Opt-in action skills for Frisbii Billing and Frisbii Pay merchants: make changes through the Frisbii Billing & Pay MCP server, always with a preview and the merchant's explicit confirmation.",
+  "author": {
+    "name": "Frisbii"
+  },
+  "homepage": "https://github.com/frisbii-com/frisbii-mcp-skills",
+  "keywords": ["frisbii", "billing", "payments", "mcp", "subscriptions", "actions"]
+}

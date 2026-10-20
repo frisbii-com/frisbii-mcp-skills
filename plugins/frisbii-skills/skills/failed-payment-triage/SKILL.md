@@ -6,7 +6,6 @@ description: Diagnoses failed and overdue payments on a Frisbii account. Shows h
 # failed-payment-triage
 
 **Product:** Pay. Also works for Billing.
-**Featured:** week 6 (30 Nov 2026, Cyber Monday). Refresher in week 12.
 **Call budget:** 2 pre-flight calls + 4–5 calls, about 2–3 minutes.
 
 ## Before you start
