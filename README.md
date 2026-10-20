@@ -25,8 +25,10 @@ All skills are **read-only**: they never change anything in Frisbii or send anyt
 | [churn-and-retention](plugins/frisbii-skills/skills/churn-and-retention/SKILL.md) | Billing | 12 | Draft, not validated |
 | [migration-from-transform](plugins/frisbii-skills/skills/migration-from-transform/SKILL.md) | Billing (Transform customers) | 13 | Draft, not validated. Content needs migration-team review |
 | [dunning-review](plugins/frisbii-skills/skills/dunning-review/SKILL.md) | Pay | 13 (alt) | Draft, not validated |
+| [payment-method-mix](plugins/frisbii-skills/skills/payment-method-mix/SKILL.md) | Pay | 4 (alt) | Draft, not validated |
+| [plan-performance](plugins/frisbii-skills/skills/plan-performance/SKILL.md) | Billing | Unscheduled | Draft, not validated |
 
-Not built yet: `payment-method-mix` (week 4 Pay alternative) and `plan-performance` (unscheduled). The full roadmap (19 skills) and the skill-to-MCP-tool mapping are in [docs/mcp-tool-map.md](docs/mcp-tool-map.md). The test plan is in [docs/validation-plan.md](docs/validation-plan.md).
+All 19 skills from the roadmap are drafted. The full roadmap and the skill-to-MCP-tool mapping are in [docs/mcp-tool-map.md](docs/mcp-tool-map.md). The test plan is in [docs/validation-plan.md](docs/validation-plan.md).
 
 ## Install
 

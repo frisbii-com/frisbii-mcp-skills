@@ -36,6 +36,8 @@ How to validate each skill once an account has MCP entitlement. Run each test in
 | churn-and-retention | "How bad was churn this quarter?" · "Who's at risk of cancelling?" | `count_subscriptions` ×5–6, `get_subscription_revenue`, `get_committed_recurring_revenue`, `count_customers` | Uses `ended_*`, never `cancelled_*`. Voluntary/involuntary split shown only if the data supports it |
 | dunning-review | "How well do my retries work?" · "What's my recovery rate?" | `list_dunning_plans`, `count_invoices` ×2, `investigate_dunning_invoices`, `list_invoices` ≤4 pages | Recovered = settled with a dunning timestamp. Sample disclosed. Suggestions only, no plan changes |
 | migration-from-transform | "We're moving from Transform. Where do we start?" · "Check our migration" (with totals) | 0 (planning) · 5 (readiness) · 5–7 (post-migration) | Never asks for card data. Side-by-side comparison flags differences above 1% |
+| payment-method-mix | "Card vs MobilePay. How do my customers pay?" · "Which payment method fails most?" | `count_transactions` ×2–3, `count_open_transactions` ×2–3, `count_customers` | Each figure labelled with its basis (settled period vs all time). No invented per-country split |
+| plan-performance | "Which plans perform best?" · "Which plan should we retire?" | `get_subscription_revenue`, `count_subscriptions` ×3, `get_committed_recurring_revenue`, `list_plans` (± `get_plan`), ± `list_coupons` | Report still works if `list_plans` is empty (handles shown). Churn uses `ended_*`. `group_by=plan` accepted on all calls |
 
 ## Open questions to answer during validation
 
