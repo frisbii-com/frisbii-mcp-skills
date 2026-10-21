@@ -25,7 +25,7 @@ Apply **frisbii-core** first. If it isn't installed, still follow these minimum 
 | # | Tool | Arguments | Purpose |
 |---|---|---|---|
 | 1 | `list_coupons` | `state=active`, `limit=100` (or `code=` per named coupon) | Coupons, discount handle, redemptions vs limit, validity, eligible plans |
-| 2 | `list_discounts` | `limit=100` | Discount values: amount or percentage, currency, state |
+| 2 | `list_discounts` | `limit=100` | Discount values: amount or percentage, currency, state. The tool has no state filter and returns deleted discounts too; ignore `state: deleted` unless a coupon points at one (flag that) |
 | 3 | `list_plans` | `plan_state=active`, `limit=100` | Active plans and their currency |
 | 4+ | `get_plan` | `handle` (only for plans a coupon names that weren't in call 3, max 5) | Confirms superseded or missing plans |
 
