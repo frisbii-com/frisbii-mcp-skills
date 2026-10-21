@@ -9,39 +9,41 @@ The repo holds two plugins:
 
 ## Read-only skills (frisbii-skills)
 
-| Skill | Product | Try asking |
+| Skill | Works with | Try asking |
 |---|---|---|
-| [frisbii-core](plugins/frisbii-skills/skills/frisbii-core/SKILL.md) | Both | (shared rules, used by every skill) |
-| [month-end-close](plugins/frisbii-skills/skills/month-end-close/SKILL.md) | Billing | "Close September for me." |
-| [payout-reconciliation](plugins/frisbii-skills/skills/payout-reconciliation/SKILL.md) | Pay | "Reconcile my September payouts." |
-| [customer-360](plugins/frisbii-skills/skills/customer-360/SKILL.md) | Both | "Brief me on this customer before my call." |
-| [card-expiry-sweep](plugins/frisbii-skills/skills/card-expiry-sweep/SKILL.md) | Pay | "Check the cards for my top 20 customers." |
-| [account-hygiene](plugins/frisbii-skills/skills/account-hygiene/SKILL.md) | Both | "Give my account a health check." |
-| [promo-readiness](plugins/frisbii-skills/skills/promo-readiness/SKILL.md) | Billing | "Is my next promo set up right?" |
-| [peak-pulse](plugins/frisbii-skills/skills/peak-pulse/SKILL.md) | Pay | "How are payments doing today?" |
-| [failed-payment-triage](plugins/frisbii-skills/skills/failed-payment-triage/SKILL.md) | Pay | "Why are payments failing?" |
-| [promo-cohort-quality](plugins/frisbii-skills/skills/promo-cohort-quality/SKILL.md) | Billing | "Did my Black Friday customers stick?" |
-| [dispute-monitor](plugins/frisbii-skills/skills/dispute-monitor/SKILL.md) | Pay | "Which disputes need a response?" |
-| [renewal-radar](plugins/frisbii-skills/skills/renewal-radar/SKILL.md) | Billing | "Which annual renewals are coming up?" |
-| [year-in-review](plugins/frisbii-skills/skills/year-in-review/SKILL.md) | Both | "My 2026 in review." |
-| [board-pack](plugins/frisbii-skills/skills/board-pack/SKILL.md) | Billing | "Board pack for Q3." |
-| [churn-and-retention](plugins/frisbii-skills/skills/churn-and-retention/SKILL.md) | Billing | "Who's at risk of cancelling?" |
-| [migration-from-transform](plugins/frisbii-skills/skills/migration-from-transform/SKILL.md) | Billing (Transform customers) | "We're moving from Transform. Where do we start?" |
-| [dunning-review](plugins/frisbii-skills/skills/dunning-review/SKILL.md) | Pay | "How well do my retries work?" |
-| [payment-method-mix](plugins/frisbii-skills/skills/payment-method-mix/SKILL.md) | Pay | "How do my customers pay?" |
-| [plan-performance](plugins/frisbii-skills/skills/plan-performance/SKILL.md) | Billing | "Which plans are performing best?" |
+| [frisbii-core](plugins/frisbii-skills/skills/frisbii-core/SKILL.md) | Frisbii Billing, Frisbii Pay | (shared rules, used by every skill) |
+| [month-end-close](plugins/frisbii-skills/skills/month-end-close/SKILL.md) | Frisbii Billing, Frisbii Pay (subscriptions) | "Close September for me." |
+| [payout-reconciliation](plugins/frisbii-skills/skills/payout-reconciliation/SKILL.md) | Frisbii Billing, Frisbii Pay | "Reconcile my September payouts." |
+| [customer-360](plugins/frisbii-skills/skills/customer-360/SKILL.md) | Frisbii Billing, Frisbii Pay | "Brief me on this customer before my call." |
+| [card-expiry-sweep](plugins/frisbii-skills/skills/card-expiry-sweep/SKILL.md) | Frisbii Billing, Frisbii Pay | "Check the cards for my top 20 customers." |
+| [account-hygiene](plugins/frisbii-skills/skills/account-hygiene/SKILL.md) | Frisbii Billing, Frisbii Pay | "Give my account a health check." |
+| [promo-readiness](plugins/frisbii-skills/skills/promo-readiness/SKILL.md) | Frisbii Billing, Frisbii Pay (subscriptions) | "Is my next promo set up right?" |
+| [peak-pulse](plugins/frisbii-skills/skills/peak-pulse/SKILL.md) | Frisbii Billing (sign-ups), Frisbii Pay | "How are payments doing today?" |
+| [failed-payment-triage](plugins/frisbii-skills/skills/failed-payment-triage/SKILL.md) | Frisbii Billing, Frisbii Pay | "Why are payments failing?" |
+| [promo-cohort-quality](plugins/frisbii-skills/skills/promo-cohort-quality/SKILL.md) | Frisbii Billing, Frisbii Pay (subscriptions) | "Did my Black Friday customers stick?" |
+| [dispute-monitor](plugins/frisbii-skills/skills/dispute-monitor/SKILL.md) | Frisbii Billing, Frisbii Pay | "Which disputes need a response?" |
+| [renewal-radar](plugins/frisbii-skills/skills/renewal-radar/SKILL.md) | Frisbii Billing | "Which annual renewals are coming up?" |
+| [year-in-review](plugins/frisbii-skills/skills/year-in-review/SKILL.md) | Frisbii Billing, Frisbii Pay | "My 2026 in review." |
+| [board-pack](plugins/frisbii-skills/skills/board-pack/SKILL.md) | Frisbii Billing, Frisbii Pay (subscriptions) | "Board pack for Q3." |
+| [churn-and-retention](plugins/frisbii-skills/skills/churn-and-retention/SKILL.md) | Frisbii Billing, Frisbii Pay (subscriptions) | "Who's at risk of cancelling?" |
+| [migration-from-transform](plugins/frisbii-skills/skills/migration-from-transform/SKILL.md) | Frisbii Billing (moving from Frisbii Transform) | "We're moving from Transform. Where do we start?" |
+| [dunning-review](plugins/frisbii-skills/skills/dunning-review/SKILL.md) | Frisbii Billing, Frisbii Pay | "How well do my retries work?" |
+| [payment-method-mix](plugins/frisbii-skills/skills/payment-method-mix/SKILL.md) | Frisbii Billing, Frisbii Pay | "How do my customers pay?" |
+| [plan-performance](plugins/frisbii-skills/skills/plan-performance/SKILL.md) | Frisbii Billing, Frisbii Pay (subscriptions) | "Which plans are performing best?" |
+
+"Frisbii Pay (subscriptions)" means the skill works for Frisbii Pay merchants who run subscriptions on Pay.
 
 ## Action skills (frisbii-actions)
 
-| Skill | Product | Changes |
+| Skill | Works with | Changes |
 |---|---|---|
-| [frisbii-actions-core](plugins/frisbii-actions/skills/frisbii-actions-core/SKILL.md) | Both | Safety rules for every action skill: preview, confirm, one write at a time |
-| [failed-payment-recovery](plugins/frisbii-actions/skills/failed-payment-recovery/SKILL.md) | Pay and Billing | Retries failed payments likely to succeed |
-| [promo-setup](plugins/frisbii-actions/skills/promo-setup/SKILL.md) | Billing | Creates discounts and coupons, extends coupons |
-| [retention-offer](plugins/frisbii-actions/skills/retention-offer/SKILL.md) | Billing | Applies a coupon to a subscription, pauses or resumes it |
-| [account-cleanup](plugins/frisbii-actions/skills/account-cleanup/SKILL.md) | Both | Voids stale unpaid invoices, cancels stuck pending subscriptions |
-| [dunning-tuning](plugins/frisbii-actions/skills/dunning-tuning/SKILL.md) | Pay and Billing | Changes a dunning plan's retries, grace period or final action |
-| [catalogue-build](plugins/frisbii-actions/skills/catalogue-build/SKILL.md) | Billing | Creates plans and add-ons, e.g. when moving from Frisbii Transform |
+| [frisbii-actions-core](plugins/frisbii-actions/skills/frisbii-actions-core/SKILL.md) | Frisbii Billing, Frisbii Pay | Safety rules for every action skill: preview, confirm, one write at a time |
+| [failed-payment-recovery](plugins/frisbii-actions/skills/failed-payment-recovery/SKILL.md) | Frisbii Billing, Frisbii Pay | Retries failed payments likely to succeed |
+| [promo-setup](plugins/frisbii-actions/skills/promo-setup/SKILL.md) | Frisbii Billing | Creates discounts and coupons, extends coupons |
+| [retention-offer](plugins/frisbii-actions/skills/retention-offer/SKILL.md) | Frisbii Billing | Applies a coupon to a subscription, pauses or resumes it |
+| [account-cleanup](plugins/frisbii-actions/skills/account-cleanup/SKILL.md) | Frisbii Billing, Frisbii Pay | Voids stale unpaid invoices, cancels stuck pending subscriptions |
+| [dunning-tuning](plugins/frisbii-actions/skills/dunning-tuning/SKILL.md) | Frisbii Billing, Frisbii Pay | Changes a dunning plan's retries, grace period or final action |
+| [catalogue-build](plugins/frisbii-actions/skills/catalogue-build/SKILL.md) | Frisbii Billing | Creates plans and add-ons, e.g. when moving from Frisbii Transform |
 
 Action skills need MCP access that allows changes. Each one lists the only write tools it may call, never refunds, charges or touches payment methods, and makes at most 10 changes per confirmation.
 
