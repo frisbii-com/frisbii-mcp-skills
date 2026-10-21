@@ -6,5 +6,13 @@
     "name": "Frisbii"
   },
   "homepage": "https://github.com/frisbii-com/frisbii-mcp-skills",
-  "keywords": ["frisbii", "billing", "payments", "mcp", "subscriptions", "actions"]
+  "license": "MIT",
+  "keywords": [
+    "frisbii",
+    "billing",
+    "payments",
+    "mcp",
+    "subscriptions",
+    "actions"
+  ]
 }
