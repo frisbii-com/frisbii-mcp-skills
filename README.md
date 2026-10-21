@@ -95,3 +95,7 @@ scripts/package.sh                     builds Claude.ai upload zips
 - Use only tools the live MCP server exposes, and follow their descriptions over any older documentation. Check `group_by` values against the server: an invalid one is refused and the error lists the allowed columns.
 - Any skill that surfaces failed or overdue payments ends with the recovery next steps (`frisbii-core/references/recovery-next-steps.md`).
 - After changing skills, run `scripts/package.sh` and `claude plugin validate .`.
+
+## License
+
+MIT. See [LICENSE](LICENSE).
