@@ -9,43 +9,41 @@ The repo holds two plugins:
 
 ## Read-only skills (frisbii-skills)
 
-| Skill | Product | Try asking | Status |
-|---|---|---|---|
-| [frisbii-core](plugins/frisbii-skills/skills/frisbii-core/SKILL.md) | Both | (shared rules, used by every skill) | Tested |
-| [month-end-close](plugins/frisbii-skills/skills/month-end-close/SKILL.md) | Billing | "Close September for me." | Tested |
-| [payout-reconciliation](plugins/frisbii-skills/skills/payout-reconciliation/SKILL.md) | Pay | "Reconcile my September payouts." | Not yet tested |
-| [customer-360](plugins/frisbii-skills/skills/customer-360/SKILL.md) | Both | "Brief me on this customer before my call." | Tested |
-| [card-expiry-sweep](plugins/frisbii-skills/skills/card-expiry-sweep/SKILL.md) | Pay | "Check the cards for my top 20 customers." | Tested |
-| [account-hygiene](plugins/frisbii-skills/skills/account-hygiene/SKILL.md) | Both | "Give my account a health check." | Tested |
-| [promo-readiness](plugins/frisbii-skills/skills/promo-readiness/SKILL.md) | Billing | "Is my next promo set up right?" | Tested |
-| [peak-pulse](plugins/frisbii-skills/skills/peak-pulse/SKILL.md) | Pay | "How are payments doing today?" | Tested |
-| [failed-payment-triage](plugins/frisbii-skills/skills/failed-payment-triage/SKILL.md) | Pay | "Why are payments failing?" | Tested |
-| [promo-cohort-quality](plugins/frisbii-skills/skills/promo-cohort-quality/SKILL.md) | Billing | "Did my Black Friday customers stick?" | Tested |
-| [dispute-monitor](plugins/frisbii-skills/skills/dispute-monitor/SKILL.md) | Pay | "Which disputes need a response?" | Tested on an account with no disputes |
-| [renewal-radar](plugins/frisbii-skills/skills/renewal-radar/SKILL.md) | Billing | "Which annual renewals are coming up?" | Tested on an account with no annual plans |
-| [year-in-review](plugins/frisbii-skills/skills/year-in-review/SKILL.md) | Both | "My 2026 in review." | Tested |
-| [board-pack](plugins/frisbii-skills/skills/board-pack/SKILL.md) | Billing | "Board pack for Q3." | Tested |
-| [churn-and-retention](plugins/frisbii-skills/skills/churn-and-retention/SKILL.md) | Billing | "Who's at risk of cancelling?" | Tested |
-| [migration-from-transform](plugins/frisbii-skills/skills/migration-from-transform/SKILL.md) | Billing (Transform customers) | "We're moving from Transform. Where do we start?" | Tested. Content still needs migration-team review |
-| [dunning-review](plugins/frisbii-skills/skills/dunning-review/SKILL.md) | Pay | "How well do my retries work?" | Tested |
-| [payment-method-mix](plugins/frisbii-skills/skills/payment-method-mix/SKILL.md) | Pay | "How do my customers pay?" | Tested |
-| [plan-performance](plugins/frisbii-skills/skills/plan-performance/SKILL.md) | Billing | "Which plans are performing best?" | Tested |
-
-"Tested" means the skill was run against a live Frisbii Billing account through the MCP server in October 2026, and fixed where the live tools behaved differently. Pay-only behaviour (payouts, disputes, card-heavy accounts) and annual plans still need testing on accounts that have that data.
+| Skill | Product | Try asking |
+|---|---|---|
+| [frisbii-core](plugins/frisbii-skills/skills/frisbii-core/SKILL.md) | Both | (shared rules, used by every skill) |
+| [month-end-close](plugins/frisbii-skills/skills/month-end-close/SKILL.md) | Billing | "Close September for me." |
+| [payout-reconciliation](plugins/frisbii-skills/skills/payout-reconciliation/SKILL.md) | Pay | "Reconcile my September payouts." |
+| [customer-360](plugins/frisbii-skills/skills/customer-360/SKILL.md) | Both | "Brief me on this customer before my call." |
+| [card-expiry-sweep](plugins/frisbii-skills/skills/card-expiry-sweep/SKILL.md) | Pay | "Check the cards for my top 20 customers." |
+| [account-hygiene](plugins/frisbii-skills/skills/account-hygiene/SKILL.md) | Both | "Give my account a health check." |
+| [promo-readiness](plugins/frisbii-skills/skills/promo-readiness/SKILL.md) | Billing | "Is my next promo set up right?" |
+| [peak-pulse](plugins/frisbii-skills/skills/peak-pulse/SKILL.md) | Pay | "How are payments doing today?" |
+| [failed-payment-triage](plugins/frisbii-skills/skills/failed-payment-triage/SKILL.md) | Pay | "Why are payments failing?" |
+| [promo-cohort-quality](plugins/frisbii-skills/skills/promo-cohort-quality/SKILL.md) | Billing | "Did my Black Friday customers stick?" |
+| [dispute-monitor](plugins/frisbii-skills/skills/dispute-monitor/SKILL.md) | Pay | "Which disputes need a response?" |
+| [renewal-radar](plugins/frisbii-skills/skills/renewal-radar/SKILL.md) | Billing | "Which annual renewals are coming up?" |
+| [year-in-review](plugins/frisbii-skills/skills/year-in-review/SKILL.md) | Both | "My 2026 in review." |
+| [board-pack](plugins/frisbii-skills/skills/board-pack/SKILL.md) | Billing | "Board pack for Q3." |
+| [churn-and-retention](plugins/frisbii-skills/skills/churn-and-retention/SKILL.md) | Billing | "Who's at risk of cancelling?" |
+| [migration-from-transform](plugins/frisbii-skills/skills/migration-from-transform/SKILL.md) | Billing (Transform customers) | "We're moving from Transform. Where do we start?" |
+| [dunning-review](plugins/frisbii-skills/skills/dunning-review/SKILL.md) | Pay | "How well do my retries work?" |
+| [payment-method-mix](plugins/frisbii-skills/skills/payment-method-mix/SKILL.md) | Pay | "How do my customers pay?" |
+| [plan-performance](plugins/frisbii-skills/skills/plan-performance/SKILL.md) | Billing | "Which plans are performing best?" |
 
 ## Action skills (frisbii-actions)
 
-| Skill | Product | Changes | Status |
-|---|---|---|---|
-| [frisbii-actions-core](plugins/frisbii-actions/skills/frisbii-actions-core/SKILL.md) | Both | Safety rules for every action skill: preview, confirm, one write at a time | Not yet tested |
-| [failed-payment-recovery](plugins/frisbii-actions/skills/failed-payment-recovery/SKILL.md) | Pay and Billing | Retries failed payments likely to succeed | Not yet tested |
-| [promo-setup](plugins/frisbii-actions/skills/promo-setup/SKILL.md) | Billing | Creates discounts and coupons, extends coupons | Not yet tested |
-| [retention-offer](plugins/frisbii-actions/skills/retention-offer/SKILL.md) | Billing | Applies a coupon to a subscription, pauses or resumes it | Not yet tested |
-| [account-cleanup](plugins/frisbii-actions/skills/account-cleanup/SKILL.md) | Both | Voids stale unpaid invoices, cancels stuck pending subscriptions | Not yet tested |
-| [dunning-tuning](plugins/frisbii-actions/skills/dunning-tuning/SKILL.md) | Pay and Billing | Changes a dunning plan's retries, grace period or final action | Not yet tested |
-| [catalogue-build](plugins/frisbii-actions/skills/catalogue-build/SKILL.md) | Billing | Creates plans and add-ons, e.g. when moving from Frisbii Transform | Not yet tested |
+| Skill | Product | Changes |
+|---|---|---|
+| [frisbii-actions-core](plugins/frisbii-actions/skills/frisbii-actions-core/SKILL.md) | Both | Safety rules for every action skill: preview, confirm, one write at a time |
+| [failed-payment-recovery](plugins/frisbii-actions/skills/failed-payment-recovery/SKILL.md) | Pay and Billing | Retries failed payments likely to succeed |
+| [promo-setup](plugins/frisbii-actions/skills/promo-setup/SKILL.md) | Billing | Creates discounts and coupons, extends coupons |
+| [retention-offer](plugins/frisbii-actions/skills/retention-offer/SKILL.md) | Billing | Applies a coupon to a subscription, pauses or resumes it |
+| [account-cleanup](plugins/frisbii-actions/skills/account-cleanup/SKILL.md) | Both | Voids stale unpaid invoices, cancels stuck pending subscriptions |
+| [dunning-tuning](plugins/frisbii-actions/skills/dunning-tuning/SKILL.md) | Pay and Billing | Changes a dunning plan's retries, grace period or final action |
+| [catalogue-build](plugins/frisbii-actions/skills/catalogue-build/SKILL.md) | Billing | Creates plans and add-ons, e.g. when moving from Frisbii Transform |
 
-Action skills need MCP access that allows changes. Each one lists the only write tools it may call, never refunds, charges or touches payment methods, and makes at most 10 changes per confirmation. They will be tested on a test account with write access, never on live merchant data.
+Action skills need MCP access that allows changes. Each one lists the only write tools it may call, never refunds, charges or touches payment methods, and makes at most 10 changes per confirmation.
 
 ## Requirements
 
